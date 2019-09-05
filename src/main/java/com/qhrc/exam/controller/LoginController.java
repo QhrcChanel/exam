@@ -21,7 +21,7 @@ public class LoginController {
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
     @ResponseBody
     public String login(User user, HttpSession session){
-		User dbUser = userService.getUserByName(user.getUserName());
+		User dbUser = userService.getUserByAcctName(user.getAcctName());
 		
 		if(dbUser == null) {
 			return ResultType.USER_NOT_EXIST;

@@ -3,12 +3,13 @@
 <mapper namespace="com.qhrc.exam.dao.IUserDao">
     <resultMap id="BaseResultMap" type="com.qhrc.exam.domain.User">
         <id column="user_id" property="userId" jdbcType="INTEGER" />
+        <result column="acct_name" property="acctName" jdbcType="VARCHAR" />
         <result column="user_name" property="userName" jdbcType="VARCHAR" />
         <result column="password" property="password" jdbcType="VARCHAR" />
     </resultMap>
 
     <sql id="Base_Column_List">
-        user_id, user_name, password
+        user_id, acct_name, user_name, password
     </sql>
     
     <select id="selectById" resultMap="BaseResultMap"
@@ -18,11 +19,11 @@
         from user where user_id = #{userId,jdbcType=INTEGER}
     </select>
     
-    <select id="selectByName" resultMap="BaseResultMap"
+    <select id="selectByAcctName" resultMap="BaseResultMap"
         parameterType="java.lang.String">
         select 
 		<include refid="Base_Column_List" /> 
-		from user where user_name = #{userName,jdbcType=VARCHAR}
+		from user where acct_name = #{acctName,jdbcType=VARCHAR}
     </select>
 
 </mapper>

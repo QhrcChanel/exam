@@ -4,5 +4,5 @@ import com.qhrc.exam.domain.User;
 
 public interface UserService {
 	public User getUserById(Integer id);
-	public User getUserByName(String userName);
+	public User getUserByAcctName(String acctName);
 }
