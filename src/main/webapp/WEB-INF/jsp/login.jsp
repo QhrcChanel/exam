@@ -32,7 +32,7 @@
 			success : function(data) {
 				if ("000000" === data) {
 					alert("登录成功！");
-					location.href = "index.jsp";
+					location.href = "index";
 				} else if ("000001" === data) {
 					alert("用户名不存在，请核对后重新登录！");
 				} else if ("000002" === data) {

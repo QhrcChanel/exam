@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qhrc.exam.dao.IQuestionDao">
+    <resultMap id="BaseResultMap" type="com.qhrc.exam.domain.Question">
+        <id column="ques_id" property="quesId" jdbcType="INTEGER" />
+        <result column="ques_title" property="quesTitle" jdbcType="VARCHAR" />
+        <result column="ques_right_answer" property="quesRightAnswer" jdbcType="VARCHAR" />
+        <result column="ques_type_id" property="quesTypeId" jdbcType="INTEGER" />
+        <result column="ques_cate_id" property="quesCateId" jdbcType="INTEGER" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ques_id, ques_title, ques_right_answer, ques_type_id, ques_cate_id
+    </sql>
+    
+    <select id="selectQuesByParmas" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from question where 1=1
+        <if test="quesTitle!=null">
+        	ques_title = #{quesTitle}
+        </if> 
+        
+        <if test="quesTitle!=null">
+        	ques_title = #{quesTitle}
+        </if> 
+        
+        <if test="quesTypeId!=null">
+        	ques_type_id = #{quesTypeId}
+        </if> 
+        
+        <if test="quesCateId!=null">
+        	ques_cate_id = #{quesCateId}
+        </if> 
+    </select>
+    
+</mapper>
