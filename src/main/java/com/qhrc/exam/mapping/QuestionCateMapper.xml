@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qhrc.exam.dao.IQuestionCateDao">
+    <resultMap id="BaseResultMap" type="com.qhrc.exam.domain.QuestionCate">
+        <id column="ques_cate_id" property="quesCateId" jdbcType="INTEGER" />
+        <result column="ques_cate_name" property="quesCateName" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ques_cate_id, ques_cate_name
+    </sql>
+    
+    <select id="selectQuesCate" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from question_cate
+    </select>
+    
+</mapper>

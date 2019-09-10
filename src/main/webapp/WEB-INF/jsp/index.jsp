@@ -796,7 +796,7 @@ function changeFrameHeight(that){
 			</div>
 			
 			<iframe src="home" id="iframe" name="iframe" scrolling="no" frameborder="0" 
-			width="85%" height="100%" onload="changeFrameHeight(this)"></iframe>
+			width="80%" height="100%" onload="changeFrameHeight(this)"></iframe>
 			
 			
 			<!-- /section:basics/sidebar -->

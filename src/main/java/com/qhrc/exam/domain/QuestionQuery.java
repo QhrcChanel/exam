@@ -1,42 +1,28 @@
 package com.qhrc.exam.domain;
 
-public class Question {
-	private Integer quesId;
+public class QuestionQuery extends QueryEntity {
 	private String quesTitle;
-	private String quesRightAnswer;
-	private Integer quesTypeId;
-	private Integer quesCateId;
+	private int quesTypeId;
+	private int quesCateId;
 	private String quesTypeName;
 	private String quesCateName;
 	
-	public Integer getQuesId() {
-		return quesId;
-	}
-	public void setQuesId(Integer quesId) {
-		this.quesId = quesId;
-	}
 	public String getQuesTitle() {
 		return quesTitle;
 	}
 	public void setQuesTitle(String quesTitle) {
 		this.quesTitle = quesTitle;
 	}
-	public String getQuesRightAnswer() {
-		return quesRightAnswer;
-	}
-	public void setQuesRightAnswer(String quesRightAnswer) {
-		this.quesRightAnswer = quesRightAnswer;
-	}
-	public Integer getQuesTypeId() {
+	public int getQuesTypeId() {
 		return quesTypeId;
 	}
-	public void setQuesTypeId(Integer quesTypeId) {
+	public void setQuesTypeId(int quesTypeId) {
 		this.quesTypeId = quesTypeId;
 	}
-	public Integer getQuesCateId() {
+	public int getQuesCateId() {
 		return quesCateId;
 	}
-	public void setQuesCateId(Integer quesCateId) {
+	public void setQuesCateId(int quesCateId) {
 		this.quesCateId = quesCateId;
 	}
 	public String getQuesTypeName() {

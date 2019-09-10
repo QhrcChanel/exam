@@ -231,24 +231,13 @@
 			</div>
 			<!-- /.main-content -->
 		</div>
-		<!-- /.main-container -->
-
-		<!-- basic scripts -->
-
-		<!--[if !IE]> -->
+	</div>
 		<script type="text/javascript">
 			window.jQuery
 					|| document.write("<script src='../assets/js/jquery.js'>"
 							+ "<"+"/script>");
 		</script>
 
-		<!-- <![endif]-->
-
-		<!--[if IE]>
-<script type="text/javascript">
- window.jQuery || document.write("<script src='../assets/js/jquery1x.js'>"+"<"+"/script>");
-</script>
-<![endif]-->
 		<script type="text/javascript">
 			if ('ontouchstart' in document.documentElement)
 				document
