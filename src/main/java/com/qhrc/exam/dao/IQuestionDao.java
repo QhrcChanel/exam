@@ -13,4 +13,6 @@ public interface IQuestionDao {
 											@Param("quesTitle")String quesTitle, 
 											@Param("quesTypeId")Integer quesTypeId, 
 											@Param("quesCateId")Integer quesCateId);
+	
+	public int updateQues(Question question);
 }

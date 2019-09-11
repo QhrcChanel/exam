@@ -30,4 +30,9 @@ public class QuestionServiceImpl implements QuestionService {
 		return questionDao.selectQuesByParmas(currIndex, questionQuery.getPageSize(), 
 			questionQuery.getQuesTitle(), questionQuery.getQuesTypeId(), questionQuery.getQuesCateId());
 	}
+
+	@Override
+	public int modifyQuestion(Question question) {
+		return questionDao.updateQues(question);
+	}
 }

@@ -8,4 +8,5 @@ import com.qhrc.exam.domain.QuestionQuery;
 public interface QuestionService {
 	public void addQuestionList(List<Question> quesList);
 	public List<Question> queryQuesByParams(QuestionQuery questionQuery);
+	public int modifyQuestion(Question question);
 }

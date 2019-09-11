@@ -33,9 +33,9 @@ public class QuestionController {
 	@Autowired
     QuestionCateService quesCateService;
 	
-	@RequestMapping(value = "/viewQues", method = RequestMethod.GET)
-    public String queryQues(HttpSession session){
-		return "question/viewQues";
+	@RequestMapping(value = "/viewQuesList", method = RequestMethod.GET)
+    public String viewQuesList(HttpSession session){
+		return "question/viewQuesList";
 	}
 	
 	@RequestMapping(value = "/queryQues", method = RequestMethod.POST)
@@ -43,6 +43,13 @@ public class QuestionController {
     public String queryQues(QuestionQuery questionQuery, HttpSession session){
 		List<Question> quesList = quesService.queryQuesByParams(questionQuery);
 		return JSON.toJSONString(quesList);
+	}
+	
+	@RequestMapping(value = "/editQues", method = RequestMethod.POST)
+	@ResponseBody
+    public String queryQuesCate(Question question, HttpSession session){
+		int result = quesService.modifyQuestion(question);
+		return String.valueOf(result);
 	}
 	
 	@RequestMapping(value = "/queryQuesType", method = RequestMethod.POST)

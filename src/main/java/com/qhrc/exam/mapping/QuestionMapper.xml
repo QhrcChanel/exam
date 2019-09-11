@@ -36,4 +36,23 @@
         	limit #{currIndex}, #{pageSize}
     </select>
     
+    <update id="updateQues" parameterType="com.qhrc.exam.domain.Question">
+    	update question set 
+    	<trim prefix="set" suffixOverrides=",">
+    	
+    	<if test="quesTitle != null and quesTitle != ''">
+    		ques_title = #{quesTitle},
+    	</if>
+    	
+    	<if test="quesTypeId != null and quesTypeId != 0">
+    		ques_type_id = #{quesTypeId},
+    	</if>
+    	
+    	<if test="quesCateId != null and quesCateId != 0">
+    		ques_cate_id = #{quesCateId},
+    	</if>
+    		where ques_id = #{quesId}
+    	</trim>
+    </update>
+    
 </mapper>
