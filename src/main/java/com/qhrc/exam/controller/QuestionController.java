@@ -38,6 +38,11 @@ public class QuestionController {
 		return "question/viewQuesList";
 	}
 	
+	@RequestMapping(value = "/datatable", method = RequestMethod.GET)
+    public String datatable(HttpSession session){
+		return "datatable";
+	}
+	
 	@RequestMapping(value = "/queryQues", method = RequestMethod.POST)
 	@ResponseBody
     public String queryQues(QuestionQuery questionQuery, HttpSession session){
