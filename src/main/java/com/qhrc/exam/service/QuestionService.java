@@ -11,4 +11,5 @@ public interface QuestionService {
 	public int queryQuesNumByParams(QuestionCondition questionCondition);
 	public int modifyQuestion(Question question);
 	public int addQues(Question question);
+	public int remove(Question question);
 }

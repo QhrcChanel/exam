@@ -94,7 +94,14 @@
     		</if>
     	</trim>
     		where ques_id = #{quesId}
-    	
     </update>
+    
+    <update id="deleteQues">
+    	update question 
+    	<trim prefix="set" suffixOverrides=",">
+    		ques_status = 0,
+    	</trim>
+   		where ques_id = #{quesId}
+    </update> 
     
 </mapper>

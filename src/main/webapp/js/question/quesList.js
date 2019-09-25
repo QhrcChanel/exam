@@ -102,7 +102,7 @@ function query(){
             {data: "quesTypeName"},
             {data: "quesCateName"},
             {data: null, "bSortable": false, "render": function(data, type, row, mDate) {
-                    var html =  "<button type='button' class='btn btn-info btn-sm'>" + 
+                    var html =  "<button onclick='deleteQues($(this))' id='delteQues' type='button' class='btn btn-info btn-sm'>" + 
 	                            "<i class='ace-icon fa fa-trash-o bigger-110'>" + 
 	                            "&emsp;<a style='color:#ffffff'>删除</a></i></button>";
                     return html;
@@ -224,6 +224,48 @@ function add(){
 	});
 }
 
+function deleteQues(button) {
+	var quesId = button.parent().parent().find("td:eq(1)").text();
+	$( "#deleteConfirm" ).removeClass('hide').dialog({
+		resizable: false,
+		modal: true,
+		title: "确认删除该试题？",
+		title_html: true,
+		buttons: [
+			{
+				html: "<i class='ace-icon fa fa-trash-o bigger-110'></i>&nbsp; 删除&nbsp;&nbsp;&nbsp;",
+				"class" : "btn btn-danger btn-xs",
+				click: function() {
+					$.ajax({
+						type : "post",
+						url : "removeQues",
+						dataType : "json",
+						data : {
+							"quesId" : quesId
+						},
+						success : function(result) {
+							if(result.length == 1){
+								alert("删除成功");
+							}
+						},
+						error : function() {
+							alert("网络错误！");
+						}
+					});
+				}
+			}
+			,
+			{
+				html: "<i class='ace-icon fa fa-times bigger-110'></i>&nbsp; 取消",
+				"class" : "btn btn-xs",
+				click: function() {
+					$(this).dialog( "close" );
+				}
+			}
+		]
+	});
+}
+
 $('#quesListTable').on('dblclick','td',function(){
 	if(!$(this).is('.input')){
 		var rowNum = $(this).parent().prevAll().length;
@@ -320,3 +362,4 @@ function updateQues(rowNum){
 		}
 	});
 }
+

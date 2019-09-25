@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="./assets/css/font-awesome.css" />
 		<link rel="stylesheet" href="./assets/css/ace-fonts.css" />
 		<link rel="stylesheet" href="./assets/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
+		<link rel="stylesheet" href="./assets/css/jquery-ui.css" />
 
 		<script src="./assets/js/ace-extra.js"></script>
 		<style type="text/css">
@@ -162,7 +163,20 @@
 					</div><!-- /.modal-content -->
 				</div><!-- /.modal-dialog -->
 			</div><!-- PAGE CONTENT ENDS -->
-							
+			
+			
+			<div id="deleteConfirm" class="hide">
+				<div class="alert alert-info bigger-110">
+					These items will be permanently deleted and cannot be recovered.
+				</div>
+
+				<div class="space-6"></div>
+
+				<p class="bigger-110 bolder center grey">
+					<i class="ace-icon fa fa-hand-o-right blue bigger-120"></i>
+					Are you sure?
+				</p>
+			</div>
 			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
 				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
 			</a>
@@ -190,6 +204,7 @@
 		<!-- page specific plugin scripts -->
 		<script src="./assets/js/jquery.dataTables.js"></script>
 		<script src="./assets/js/jquery.dataTables.bootstrap.js"></script>
+		<script src="./assets/js/jquery-ui.js"></script>
 
 		<!-- ace scripts -->
 		<script src="./assets/js/ace/elements.scroller.js"></script>

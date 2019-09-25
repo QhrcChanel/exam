@@ -41,11 +41,6 @@ public class QuestionController {
 		return "question/quesList";
 	}
 	
-	@RequestMapping(value = "/datatable", method = RequestMethod.GET)
-    public String datatable(HttpSession session){
-		return "datatable";
-	}
-	
 	@RequestMapping(value = "/queryQues", method = RequestMethod.POST)
 	@ResponseBody
     public String queryQues(String paramStr, HttpSession session){
@@ -76,6 +71,13 @@ public class QuestionController {
 	@ResponseBody
     public String editQues(Question question, HttpSession session){
 		int result = quesService.modifyQuestion(question);
+		return String.valueOf(result);
+	}
+	
+	@RequestMapping(value = "/removeQues", method = RequestMethod.POST)
+	@ResponseBody
+    public String removeQues(Question question, HttpSession session){
+		int result = quesService.remove(question);
 		return String.valueOf(result);
 	}
 	

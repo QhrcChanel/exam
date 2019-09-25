@@ -30,4 +30,6 @@ public interface IQuestionDao {
 									 @Param("quesCateId")Integer quesCateId);
 	
 	public int updateQues(Question question);
+	
+	public int deleteQues(Question question);
 }
