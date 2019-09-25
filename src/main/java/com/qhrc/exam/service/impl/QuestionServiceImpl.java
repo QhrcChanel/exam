@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.qhrc.exam.dao.IQuestionDao;
 import com.qhrc.exam.dao.IQuestionTypeDao;
 import com.qhrc.exam.domain.Question;
+import com.qhrc.exam.domain.QuestionCondition;
 import com.qhrc.exam.domain.QuestionQuery;
 import com.qhrc.exam.domain.QuestionType;
 import com.qhrc.exam.service.QuestionService;
@@ -20,15 +21,33 @@ public class QuestionServiceImpl implements QuestionService {
     IQuestionDao questionDao;
 	
 	@Override
-	public void addQuestionList(List<Question> quesList) {
+	public int addQues(Question question) {
+		return questionDao.insertQues(question);
+		
+	}
+	
+	@Override
+	public void addQuesList(List<Question> quesList) {
 		questionDao.insertQuesList(quesList);
 	}
 
 	@Override
-	public List<Question> queryQuesByParams(QuestionQuery questionQuery) {
-		int currIndex = (questionQuery.getPageNum() - 1) * questionQuery.getPageSize();
-		return questionDao.selectQuesByParmas(currIndex, questionQuery.getPageSize(), 
-			questionQuery.getQuesTitle(), questionQuery.getQuesTypeId(), questionQuery.getQuesCateId());
+	public List<Question> queryQuesByParams(QuestionCondition questionCondition) {
+		return questionDao.selectQuesByParmas(questionCondition.getIDisplayStart() , 
+											questionCondition.getIDisplayLength(),
+											questionCondition.getQuesTitle().trim(), 
+											questionCondition.getQuesRightAnswer().trim(),
+											questionCondition.getQuesTypeId(), 
+											questionCondition.getQuesCateId());
+	}
+	
+	@Override
+	public int queryQuesNumByParams(QuestionCondition questionCondition) {
+		return questionDao.selectQuesNumByParmas(
+											questionCondition.getQuesTitle(), 
+											questionCondition.getQuesRightAnswer(),
+											questionCondition.getQuesTypeId(), 
+											questionCondition.getQuesCateId());
 	}
 
 	@Override

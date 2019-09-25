@@ -1,667 +1,962 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>青海农信考试系统 - 首页</title>
-        <!-- Mobile specific metas -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <!-- Force IE9 to render in normal mode -->
-        <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
-        <meta name="author" content="SuggeElson" />
-        <meta name="description" content=""
-        />
-        <meta name="keywords" content=""
-        />
-        <meta name="application-name" content="sprFlat admin template" />
-        <!-- Import google fonts - Heading first/ text second -->
-        <link rel='stylesheet' type='text/css' />
-        <!--[if lt IE 9]>
+<html>
+<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>青海农信考试系统</title>
 
-<![endif]-->
-        <!-- Css files -->
-        <!-- Icons -->
-        <link href=".//assets/css/icons.css" rel="stylesheet" />
-        <!-- jQueryUI -->
-        <link href=".//assets/css/sprflat-theme/jquery.ui.all.css" rel="stylesheet" />
-        <!-- Bootstrap stylesheets (included template modifications) -->
-        <link href=".//assets/css/bootstrap.css" rel="stylesheet" />
-        <!-- Plugins stylesheets (all plugin custom css) -->
-        <link href=".//assets/css/plugins.css" rel="stylesheet" />
-        <!-- Main stylesheets (template main css file) -->
-        <link href=".//assets/css/main.css" rel="stylesheet" />
-        <!-- Custom stylesheets ( Put your own changes here ) -->
-        <link href=".//assets/css/custom.css" rel="stylesheet" />
-        <!-- Fav and touch icons -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href=".//assets/img/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href=".//assets/img/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href=".//assets/img/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href=".//assets/img/ico/apple-touch-icon-57-precomposed.png">
-        <link rel="icon" href=".//assets/img/ico/favicon.ico" type="image/png">
-        <!-- Windows8 touch icon ( http://www.buildmypinnedsite.com/ )-->
-        <meta name="msapplication-TileColor" content="#3399cc" />
-        <script type="text/javascript">
-			function changeFrameHeight(that){
-			    $(that).height(document.documentElement.clientHeight - 100);
-			}
+		<meta name="description" content="overview &amp; stats" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<link rel="stylesheet" href="./assets/css/bootstrap.css" />
+		<link rel="stylesheet" href="./assets/css/font-awesome.css" />
+		<link rel="stylesheet" href="./assets/css/ace-fonts.css" />
+		<link rel="stylesheet" href="./assets/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
+		<script src="./assets/js/ace-extra.js"></script>
+		
+<script type="text/javascript">
+function changeFrameHeight(that){
+    $(that).height(document.documentElement.clientHeight - 80);
+}
+</script>
+</head>
+
+	<body class="no-skin">
+		<!-- #section:basics/navbar.layout -->
+		<div id="navbar" class="navbar navbar-default">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-container" id="navbar-container">
+				<!-- #section:basics/sidebar.mobile.toggle -->
+				<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+					<span class="sr-only">Toggle sidebar</span>
+
+					<span class="icon-bar"></span>
+
+					<span class="icon-bar"></span>
+
+					<span class="icon-bar"></span>
+				</button>
+
+				<!-- /section:basics/sidebar.mobile.toggle -->
+				<div class="navbar-header pull-left">
+					<!-- #section:basics/navbar.layout.brand -->
+					<a href="#" class="navbar-brand">
+						<small>
+							<i class="fa fa-leaf"></i>
+							Ace Admin
+						</small>
+					</a>
+
+					<!-- /section:basics/navbar.layout.brand -->
+
+					<!-- #section:basics/navbar.toggle -->
+
+					<!-- /section:basics/navbar.toggle -->
+				</div>
+
+				<!-- #section:basics/navbar.dropdown -->
+				<div class="navbar-buttons navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="grey">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="ace-icon fa fa-tasks"></i>
+								<span class="badge badge-grey">4</span>
+							</a>
+
+							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="ace-icon fa fa-check"></i>
+									4 Tasks to complete
+								</li>
+
+								<li class="dropdown-content">
+									<ul class="dropdown-menu dropdown-navbar">
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<span class="pull-left">Software Update</span>
+													<span class="pull-right">65%</span>
+												</div>
+
+												<div class="progress progress-mini">
+													<div style="width:65%" class="progress-bar"></div>
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<span class="pull-left">Hardware Upgrade</span>
+													<span class="pull-right">35%</span>
+												</div>
+
+												<div class="progress progress-mini">
+													<div style="width:35%" class="progress-bar progress-bar-danger"></div>
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<span class="pull-left">Unit Testing</span>
+													<span class="pull-right">15%</span>
+												</div>
+
+												<div class="progress progress-mini">
+													<div style="width:15%" class="progress-bar progress-bar-warning"></div>
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<span class="pull-left">Bug Fixes</span>
+													<span class="pull-right">90%</span>
+												</div>
+
+												<div class="progress progress-mini progress-striped active">
+													<div style="width:90%" class="progress-bar progress-bar-success"></div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="dropdown-footer">
+									<a href="#">
+										See tasks with details
+										<i class="ace-icon fa fa-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="purple">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="ace-icon fa fa-bell icon-animated-bell"></i>
+								<span class="badge badge-important">8</span>
+							</a>
+
+							<ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="ace-icon fa fa-exclamation-triangle"></i>
+									8 Notifications
+								</li>
+
+								<li class="dropdown-content">
+									<ul class="dropdown-menu dropdown-navbar navbar-pink">
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
+														New Comments
+													</span>
+													<span class="pull-right badge badge-info">+12</span>
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<i class="btn btn-xs btn-primary fa fa-user"></i>
+												Bob just signed up as an editor ...
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></i>
+														New Orders
+													</span>
+													<span class="pull-right badge badge-success">+8</span>
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-info fa fa-twitter"></i>
+														Followers
+													</span>
+													<span class="pull-right badge badge-info">+11</span>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="dropdown-footer">
+									<a href="#">
+										See all notifications
+										<i class="ace-icon fa fa-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="green">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
+								<span class="badge badge-success">5</span>
+							</a>
+
+							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="ace-icon fa fa-envelope-o"></i>
+									5 Messages
+								</li>
+
+								<li class="dropdown-content">
+									<ul class="dropdown-menu dropdown-navbar">
+										<li>
+											<a href="#" class="clearfix">
+												<img src="./assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+												<span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Alex:</span>
+														Ciao sociis natoque penatibus et auctor ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>a moment ago</span>
+													</span>
+												</span>
+											</a>
+										</li>
+
+										<li>
+											<a href="#" class="clearfix">
+												<img src="./assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+												<span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Susan:</span>
+														Vestibulum id ligula porta felis euismod ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>20 minutes ago</span>
+													</span>
+												</span>
+											</a>
+										</li>
+
+										<li>
+											<a href="#" class="clearfix">
+												<img src="./assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+												<span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Bob:</span>
+														Nullam quis risus eget urna mollis ornare ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>3:15 pm</span>
+													</span>
+												</span>
+											</a>
+										</li>
+
+										<li>
+											<a href="#" class="clearfix">
+												<img src="./assets/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
+												<span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Kate:</span>
+														Ciao sociis natoque eget urna mollis ornare ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>1:33 pm</span>
+													</span>
+												</span>
+											</a>
+										</li>
+
+										<li>
+											<a href="#" class="clearfix">
+												<img src="./assets/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
+												<span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Fred:</span>
+														Vestibulum id penatibus et auctor  ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>10:09 am</span>
+													</span>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="dropdown-footer">
+									<a href="inbox.html">
+										See all messages
+										<i class="ace-icon fa fa-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<!-- #section:basics/navbar.user_menu -->
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="./assets/avatars/user.jpg" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>Welcome,</small>
+									Jason
+								</span>
+
+								<i class="ace-icon fa fa-caret-down"></i>
+							</a>
+
+							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="#">
+										<i class="ace-icon fa fa-cog"></i>
+										Settings
+									</a>
+								</li>
+
+								<li>
+									<a href="profile.html">
+										<i class="ace-icon fa fa-user"></i>
+										Profile
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="#">
+										<i class="ace-icon fa fa-power-off"></i>
+										Logout
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<!-- /section:basics/navbar.user_menu -->
+					</ul>
+				</div>
+
+				<!-- /section:basics/navbar.dropdown -->
+			</div><!-- /.navbar-container -->
+		</div>
+
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<!-- #section:basics/sidebar -->
+			<div id="sidebar" class="sidebar                  responsive">
+				<script type="text/javascript">
+					try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+				</script>
+
+				<ul class="nav nav-list">
+					<li class="home">
+						<a href="home" target="iframe">
+							<i class="menu-icon fa fa-tachometer"></i>
+							<span class="menu-text"> 首页 </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="question">
+						<a href="quesList" target="iframe">
+							<i class="menu-icon fa fa-desktop"></i>
+							<span class="menu-text">
+								试题管理
+							</span>
+						</a>
+					</li>
+
+					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-list"></i>
+							<span class="menu-text"> Tables </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="tables.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Simple &amp; Dynamic
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="jqgrid.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									jqGrid plugin
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>
+
+					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-pencil-square-o"></i>
+							<span class="menu-text"> Forms </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="form-elements.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Form Elements
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="form-elements-2.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Form Elements 2
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="form-wizard.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Wizard &amp; Validation
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="wysiwyg.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Wysiwyg &amp; Markdown
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="dropzone.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Dropzone File Upload
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>
+
+					<li class="">
+						<a href="widgets.html">
+							<i class="menu-icon fa fa-list-alt"></i>
+							<span class="menu-text"> Widgets </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="calendar.html">
+							<i class="menu-icon fa fa-calendar"></i>
+
+							<span class="menu-text">
+								Calendar
+
+								<!-- #section:basics/sidebar.layout.badge -->
+								<span class="badge badge-transparent tooltip-error" title="2 Important Events">
+									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
+								</span>
+
+								<!-- /section:basics/sidebar.layout.badge -->
+							</span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="gallery.html">
+							<i class="menu-icon fa fa-picture-o"></i>
+							<span class="menu-text"> Gallery </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-tag"></i>
+							<span class="menu-text"> More Pages </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="profile.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									User Profile
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="inbox.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Inbox
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="pricing.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Pricing Tables
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="invoice.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Invoice
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="timeline.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Timeline
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="email.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Email Templates
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="login.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Login &amp; Register
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>
+
+					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-file-o"></i>
+
+							<span class="menu-text">
+								Other Pages
+
+								<!-- #section:basics/sidebar.layout.badge -->
+								<span class="badge badge-primary">5</span>
+
+								<!-- /section:basics/sidebar.layout.badge -->
+							</span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="faq.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									FAQ
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="error-404.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Error 404
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="error-500.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Error 500
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="grid.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Grid
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="blank.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Blank Page
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>
+				</ul><!-- /.nav-list -->
+
+				<!-- #section:basics/sidebar.layout.minimize -->
+				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+					<i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+				</div>
+
+				<!-- /section:basics/sidebar.layout.minimize -->
+				<script type="text/javascript">
+					try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+				</script>
+			</div>
+			
+			<iframe src="home" id="iframe" name="iframe" frameborder="0" 
+			width="85%" height="120%" onload="changeFrameHeight(this)"></iframe>
+			
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='./assets/js/jquery.js'>"+"<"+"/script>");
 		</script>
-    </head>
-    <body>
-        <!-- Start #header -->
-        <div id="header">
-            <div class="container-fluid">
-                <div class="navbar">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="index.html">
-                            <i class="im-windows8 text-logo-element animated bounceIn"></i><span class="text-logo">spr</span><span class="text-slogan">flat</span> 
-                        </a>
-                    </div>
-                    <nav class="top-nav" role="navigation">
-                        <ul class="nav navbar-nav pull-left">
-                            <li id="toggle-sidebar-li">
-                                <a href="#" id="toggle-sidebar"><i class="en-arrow-left2"></i>
-                        </a>
-                            </li>
-                            <li>
-                                <a href="#" class="full-screen"><i class="fa-fullscreen"></i></a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" data-toggle="dropdown"><i class="ec-cog"></i><span class="notification">10</span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#"><i class="en-database"></i> Database <span class="notification">3</span></a>
-                                    </li>
-                                    <li><a href="#"><i class="st-cube"></i> Packages <span class="notification blue">17</span></a>
-                                    </li>
-                                    <li><a href="#"><i class="st-health"></i> Disconnects <span class="notification yellow">1</span></a>
-                                    </li>
-                                    <li><a href="#"><i class="im-images"></i> Images <span class="notification teal">320</span></a>
-                                    </li>
-                                    <li><a href="#"><i class="st-users"></i> Users <span class="notification orange">2k</span></a>
-                                    </li>
-                                    <li><a href="#"><i class="st-meter"></i> Traffic <span class="notification magenta">2tb</span></a>
-                                    </li>
-                                    <li><a href="#"><i class="im-coin"></i> Finances <span class="notification pink">+3k</span></a>
-                                    </li>
-                                    <li><a href="#"><i class="st-folder"></i> Directories <span class="notification green">17</span></a>
-                                    </li>
-                                    <li><a href="#"><i class="st-bag"></i> Orders <span class="notification purple">12</span></a>
-                                    </li>
-                                    <li><a href="#"><i class="ec-contract"></i> Contracts <span class="notification dark">7</span></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" data-toggle="dropdown"><i class="ec-mail"></i><span class="notification">4</span></a>
-                                <ul class="dropdown-menu email" role="menu">
-                                    <li class="mail-head">
-                                        <div class="clearfix">
-                                            <div class="pull-left">
-                                                <a href="email-inbox.html"><i class="ec-archive"></i></a>
-                                            </div>
-                                            <span>Inbox</span> 
-                                            <div class="pull-right">
-                                                <a href="email-inbox.html"><i class="st-pencil"></i></a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="search-email">
-                                        <form>
-                                            <input type="text" name="search" placeholder="Search for emails">
-                                            <button type="submit"><i class="ec-search"></i>
-                                            </button>
-                                        </form>
-                                    </li>
-                                    <li class="mail-list clearfix">
-                                        <a href="#">
-                                            <img src=".//assets/img/avatars/128.jpg" class="mail-avatar pull-left" alt="avatar">
-                                            <p class="name">
-                                                <span class="status"><i class="en-dot"></i></span> Jason Rivera
-                                                <span class="notification">2</span>
-                                                <span class="time">12:30 am</span>
-                                            </p>
-                                            <p class="msg">
-                                                I contact you regarding my account please can you set up my pass ...
-                                            </p>
-                                        </a>
-                                    </li>
-                                    <li class="mail-list clearfix">
-                                        <a href="#">
-                                            <img src=".//assets/img/avatars/129.jpg" class="mail-avatar pull-left" alt="avatar">
-                                            <p class="name">
-                                                <span class="status off"><i class="en-dot"></i></span> Steeve Mclark
-                                                <span class="notification">6</span>
-                                                <span class="time">10:26 am</span>
-                                            </p>
-                                            <p class="msg">
-                                                Good job dude awesome work here, please add theese features ...
-                                            </p>
-                                        </a>
-                                    </li>
-                                    <li class="mail-list clearfix">
-                                        <a href="#">
-                                            <img src=".//assets/img/avatars/130.jpg" class="mail-avatar pull-left" alt="avatar">
-                                            <p class="name">
-                                                <span class="status off"><i class="en-dot"></i></span> Fellix Jones
-                                                <span class="notification">1</span>
-                                                <span class="time">7:15 am</span>
-                                            </p>
-                                            <p class="msg">
-                                                I have some issues when try to reach my product page can you ...
-                                            </p>
-                                        </a>
-                                    </li>
-                                    <li class="mail-list clearfix">
-                                        <a href="#">
-                                            <img src=".//assets/img/avatars/131.jpg" class="mail-avatar pull-left" alt="avatar">
-                                            <p class="name">
-                                                <span class="status"><i class="en-dot"></i></span> Tina Dowsen
-                                                <span class="notification">5</span>
-                                                <span class="time">03:46 am</span>
-                                            </p>
-                                            <p class="msg">
-                                                Hello Sugge, i want to apply for your referal program , please ...
-                                            </p>
-                                        </a>
-                                    </li>
-                                    <li class="mail-more">
-                                        <a href="email-inbox.html">View all <i class="en-arrow-right7"></i></a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav pull-right">
-                            <li>
-                                <a href="#" id="toggle-header-area"><i class="ec-download"></i></a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" data-toggle="dropdown"><i class="br-alarm"></i> <span class="notification">5</span></a>
-                                <ul class="dropdown-menu notification-menu right" role="menu">
-                                    <li class="clearfix">
-                                        <i class="ec-chat"></i> 
-                                        <a href="#" class="notification-user"> Ric Jones </a> 
-                                        <span class="notification-action"> replied to your </span> 
-                                        <a href="#" class="notification-link"> comment</a>
-                                    </li>
-                                    <li class="clearfix">
-                                        <i class="st-pencil"></i> 
-                                        <a href="#" class="notification-user"> SuggeElson </a> 
-                                        <span class="notification-action"> just write a </span> 
-                                        <a href="#" class="notification-link"> post</a>
-                                    </li>
-                                    <li class="clearfix">
-                                        <i class="ec-trashcan"></i> 
-                                        <a href="#" class="notification-user"> SuperAdmin </a> 
-                                        <span class="notification-action"> just remove </span> 
-                                        <a href="#" class="notification-link"> 12 files</a>
-                                    </li>
-                                    <li class="clearfix">
-                                        <i class="st-paperclip"></i> 
-                                        <a href="#" class="notification-user"> C. Wiilde </a> 
-                                        <span class="notification-action"> attach </span> 
-                                        <a href="#" class="notification-link"> 3 files</a>
-                                    </li>
-                                    <li class="clearfix">
-                                        <i class="st-support"></i> 
-                                        <a href="#" class="notification-user"> John Simpson </a> 
-                                        <span class="notification-action"> add support </span> 
-                                        <a href="#" class="notification-link"> ticket</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" data-toggle="dropdown">
-                                    <img class="user-avatar" src=".//assets/img/avatars/48.jpg" alt="SuggeElson">SuggeElson</a>
-                                <ul class="dropdown-menu right" role="menu">
-                                    <li><a href="profile.html"><i class="st-user"></i> Profile</a>
-                                    </li>
-                                    <li><a href="file.html"><i class="st-cloud"></i> Files</a>
-                                    </li>
-                                    <li><a href="#"><i class="st-settings"></i> Settings</a>
-                                    </li>
-                                    <li><a href="login.html"><i class="im-exit"></i> Logout</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li id="toggle-right-sidebar-li"><a href="#" id="toggle-right-sidebar"><i class="ec-users"></i> <span class="notification">3</span></a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <!-- Start #header-area -->
-                <div id="header-area" class="fadeInDown">
-                    <div class="header-area-inner">
-                        <ul class="list-unstyled list-inline">
-                            <li>
-                                <div class="shortcut-button">
-                                    <a href="#">
-                                        <i class="im-pie"></i>
-                                        <span>Earning Stats</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="shortcut-button">
-                                    <a href="#">
-                                        <i class="ec-images color-dark"></i>
-                                        <span>Gallery</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="shortcut-button">
-                                    <a href="#">
-                                        <i class="en-light-bulb color-orange"></i>
-                                        <span>Fresh ideas</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="shortcut-button">
-                                    <a href="#">
-                                        <i class="ec-link color-blue"></i>
-                                        <span>Links</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="shortcut-button">
-                                    <a href="#">
-                                        <i class="ec-support color-red"></i>
-                                        <span>Support</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="shortcut-button">
-                                    <a href="#">
-                                        <i class="st-lock color-teal"></i>
-                                        <span>Lock area</span>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- End #header-area -->
-            </div>
-            <!-- Start .header-inner -->
-        </div>
-        <!-- End #header -->
-        <!-- Start #sidebar -->
-        <div id="sidebar">
-            <!-- Start .sidebar-inner -->
-            <div class="sidebar-inner">
-                <!-- Start #sideNav -->
-                <ul id="sideNav" class="nav nav-pills nav-stacked">
-                    <li class="top-search">
-                        <form>
-                            <input type="text" name="search" placeholder="Search ...">
-                            <button type="submit"><i class="ec-search s20"></i>
-                            </button>
-                        </form>
-                    </li>
-                    <li><a href="index.html">首页 <i class="im-screen"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"> 试题管理 <i class="im-paragraph-justify"></i></a>
-                        <ul class="nav sub">
-                            <li><a href="viewQuesList" target="iframe"><i class="ec-pencil2"></i> 查看试题</a>
-                            </li>
-                            <li><a href="datatable" target="iframe"><i class="ec-pencil2"></i> datatable</a>
-                            </li>
-                            <li><a href="form-validation.html"><i class="im-checkbox-checked"></i> Form Validation</a>
-                            </li>
-                            <li><a href="form-wizard.html"><i class="im-wand"></i> Form Wizard</a>
-                            </li>
-                            <li><a href="wysiwyg.html"><i class="fa-pencil"></i> WYSIWYG editor</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="charts.html">Charts <i class="st-chart"></i></a>
-                    </li>
-                    <li><a href="#"> Tables <i class="im-table2"></i></a>
-                        <ul class="nav sub">
-                            <li><a href="tables.html"><i class="en-arrow-right7"></i> Static tables</a>
-                            </li>
-                            <li><a href="data-tables.html"><i class="en-arrow-right7"></i> Data tables</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#"> UI Elements <i class="st-lab"></i></a>
-                        <ul class="nav sub">
-                            <li><a href="notifications.html"><i class="fa-bell"></i> Notifications</a>
-                            </li>
-                            <li><a href="panels.html"><i class="br-window"></i> Panels</a>
-                            </li>
-                            <li><a href="tiles.html"><i class="im-windows8"></i> Tiles</a>
-                            </li>
-                            <li><a href="elements.html"><i class="st-cube"></i> Elements</a>
-                            </li>
-                            <li><a href="icons.html"><i class="im-stack"></i> Icons</a>
-                            </li>
-                            <li><a href="buttons.html"><i class="im-play2"></i> Buttons</a>
-                            </li>
-                            <li><a href="calendar.html"><i class="im-calendar2"></i> Calendar</a>
-                            </li>
-                            <li><a href="grid.html"><i class="st-grid"></i> Grid</a>
-                            </li>
-                            <li><a href="typo.html"><i class="im-font"></i> Typography</a>
-                            </li>
-                            <li><a href="list.html"><i class="fa-list"></i> Lists</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><i class="ec-mail"></i> Email app</a>
-                        <ul class="nav sub">
-                            <li><a href="email-inbox.html"><i class="ec-archive"></i> Inbox</a>
-                            </li>
-                            <li><a href="email-read.html"><i class="br-eye"></i> Read email</a>
-                            </li>
-                            <li><a href="email-write.html"><i class="ec-pencil2"></i> Write email</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="file.html"><i class="en-upload"></i> File Manager</a>
-                    </li>
-                    <li><a href="gallery.html"><i class="im-images"></i> Gallery</a>
-                    </li>
-                    <li><a href="widgets.html"><i class="st-diamond"></i> Widgets </a>
-                    </li>
-                    <li><a href="#"><i class="ec-location"></i> Maps</a>
-                        <ul class="nav sub">
-                            <li><a href="maps-google.html"><i class="im-map2"></i> Google maps</a>
-                            </li>
-                            <li><a href="maps-vector.html"><i class="en-location2"></i> Vector maps</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Pages <i class="st-files"></i></a>
-                        <ul class="nav sub">
-                            <li><a href="invoice.html"><i class="st-file"></i> Invoice</a>
-                            </li>
-                            <li><a href="profile.html"><i class="ec-user"></i> Profile page</a>
-                            </li>
-                            <li><a href="search.html"><i class="ec-search"></i> Search page</a>
-                            </li>
-                            <li><a href="blank.html"><i class="im-file4"></i> Blank page</a>
-                            </li>
-                            <li><a href="login.html"><i class="ec-locked"></i> Login page</a>
-                            </li>
-                            <li><a href="lockscreen.html"><i class="ec-locked"></i> Lock screen</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="st-files"></i> Error pages</a>
-                                <ul class="nav sub">
-                                    <li><a href="400.html"><i class="st-file-broken"></i> Error 400</a>
-                                    </li>
-                                    <li><a href="401.html"><i class="st-file-broken"></i> Error 401</a>
-                                    </li>
-                                    <li><a href="403.html"><i class="st-file-broken"></i> Error 403</a>
-                                    </li>
-                                    <li><a href="404.html"><i class="st-file-broken"></i> Error 404</a>
-                                    </li>
-                                    <li><a href="405.html"><i class="st-file-broken"></i> Error 405</a>
-                                    </li>
-                                    <li><a href="500.html"><i class="st-file-broken"></i> Error 500</a>
-                                    </li>
-                                    <li><a href="503.html"><i class="st-file-broken"></i> Error 503</a>
-                                    </li>
-                                    <li><a href="offline.html"><i class="st-window"></i> Offline</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Bonus <i class="im-gift"></i></a>
-                        <ul class="nav sub">
-                            <li><a href="landing.html"><i class="im-airplane"></i> Landing page</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <!-- End #sideNav -->
-                <!-- Start .sidebar-panel -->
-                <div class="sidebar-panel">
-                    <h4 class="sidebar-panel-title"><i class="im-fire"></i> Server usage</h4>
-                    <div class="sidebar-panel-content">
-                        <ul class="server-stats">
-                            <li>
-                                <span class="txt">Disk space</span>
-                                <span class="percent">78</span>
-                                <div id="usage-sparkline" class="sparkline">Loading...</div>
-                                <div class="pie-chart" data-percent="78"></div>
-                            </li>
-                        </ul>
-                        <ul class="server-stats">
-                            <li>
-                                <span class="txt">CPU</span>
-                                <span class="percent">56</span>
-                                <div id="cpu-sparkline" class="sparkline">Loading...</div>
-                                <div class="pie-chart" data-percent="56"></div>
-                            </li>
-                        </ul>
-                        <ul class="server-stats">
-                            <li>
-                                <span class="txt">Memory</span>
-                                <span class="percent">14</span>
-                                <div id="ram-sparkline" class="sparkline">Loading...</div>
-                                <div class="pie-chart" data-percent="14"></div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- End .sidebar-panel -->
-            </div>
-            <!-- End .sidebar-inner -->
-        </div>
-        <!-- End #sidebar -->
-        <!-- Start #right-sidebar -->
-        <div id="right-sidebar" class="hide-sidebar">
-            <!-- Start .sidebar-inner -->
-            <div class="sidebar-inner">
-                <div class="sidebar-panel mt0">
-                    <div class="sidebar-panel-content fullwidth pt0">
-                        <div class="chat-user-list">
-                            <form class="form-horizontal chat-search" role="form">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Search for user...">
-                                    <button type="submit"><i class="ec-search s16"></i>
-                                    </button>
-                                </div>
-                                <!-- End .form-group  -->
-                            </form>
-                            <ul class="chat-ui bsAccordion">
-                                <li>
-                                    <a href="#">Favorites <span class="notification teal">4</span><i class="en-arrow-down5"></i></a>
-                                    <ul class="in">
-                                        <li>
-                                            <a href="#" class="chat-name">
-                                                <img class="chat-avatar" src=".//assets/img/avatars/49.jpg" alt="@chadengle">Chad Engle
-                                                <span class="has-message"><i class="im-pencil"></i></span>
-                                            </a>
-                                            <span class="status online"><i class="en-dot"></i></span>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="chat-name">
-                                                <img class="chat-avatar" src=".//assets/img/avatars/54.jpg" alt="@alagoon">Anthony Lagoon</a>
-                                            <span class="status offline"><i class="en-dot"></i></span>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="chat-name">
-                                                <img class="chat-avatar" src=".//assets/img/avatars/52.jpg" alt="@koridhandy">Kory Handy</a>
-                                            <span class="status"><i class="en-dot"></i></span>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="chat-name">
-                                                <img class="chat-avatar" src=".//assets/img/avatars/50.jpg" alt="@divya">Divia Manyan</a>
-                                            <span class="status"><i class="en-dot"></i></span>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Online <span class="notification green">3</span><i class="en-arrow-down5"></i></a>
-                                    <ul class="in">
-                                        <li>
-                                            <a href="#" class="chat-name">
-                                                <img class="chat-avatar" src=".//assets/img/avatars/51.jpg" alt="@kolage">Eric Hofman</a>
-                                            <span class="status online"><i class="en-dot"></i></span>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="chat-name">
-                                                <img class="chat-avatar" src=".//assets/img/avatars/55.jpg" alt="@mikebeecham">Mike Beecham</a>
-                                            <span class="status online"><i class="en-dot"></i></span>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="chat-name">
-                                                <img class="chat-avatar" src=".//assets/img/avatars/53.jpg" alt="@derekebradley">Darek Bradly</a>
-                                            <span class="status online"><i class="en-dot"></i></span>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Offline <span class="notification red">5</span><i class="en-arrow-down5"></i></a>
-                                    <ul>
-                                        <li>
-                                            <a href="#" class="chat-name">
-                                                <img class="chat-avatar" src=".//assets/img/avatars/56.jpg" alt="@laurengray">Lauren Grey</a>
-                                            <span class="status offline"><i class="en-dot"></i></span>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="chat-name">
-                                                <img class="chat-avatar" src=".//assets/img/avatars/49.jpg" alt="@chadengle">Chad Engle</a>
-                                            <span class="status offline"><i class="en-dot"></i></span>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="chat-name">
-                                                <img class="chat-avatar" src=".//assets/img/avatars/58.jpg" alt="@frankiefreesbie">Frankie Freesibie</a>
-                                            <span class="status offline"><i class="en-dot"></i></span>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="chat-name">
-                                                <img class="chat-avatar" src=".//assets/img/avatars/57.jpg" alt="@joannefournier">Joane Fornier</a>
-                                            <span class="status offline"><i class="en-dot"></i></span>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="chat-name">
-                                                <img class="chat-avatar" src=".//assets/img/avatars/59.jpg" alt="@aiiaiiaii">Alia Alien</a>
-                                            <span class="status offline"><i class="en-dot"></i></span>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="chat-box">
-                            <h5>Chad Engle</h5>
-                            <a id="close-user-chat" href="#" class="btn btn-xs btn-primary"><i class="en-arrow-left4"></i></a>
-                            <ul class="chat-ui chat-messages">
-                                <li class="chat-user">
-                                    <p class="avatar">
-                                        <img src=".//assets/img/avatars/49.jpg" alt="@chadengle">
-                                    </p>
-                                    <p class="chat-name">Chad Engle <span class="chat-time">15 seconds ago</span>
-                                    </p>
-                                    <span class="status online"><i class="en-dot"></i></span>
-                                    <p class="chat-txt">Hello Sugge check out the last order.</p>
-                                </li>
-                                <li class="chat-me">
-                                    <p class="avatar">
-                                        <img src=".//assets/img/avatars/48.jpg" alt="SuggeElson">
-                                    </p>
-                                    <p class="chat-name">SuggeElson <span class="chat-time">10 seconds ago</span>
-                                    </p>
-                                    <span class="status online"><i class="en-dot"></i></span>
-                                    <p class="chat-txt">Ok i will check it out.</p>
-                                </li>
-                                <li class="chat-user">
-                                    <p class="avatar">
-                                        <img src=".//assets/img/avatars/49.jpg" alt="@chadengle">
-                                    </p>
-                                    <p class="chat-name">Chad Engle <span class="chat-time">now</span>
-                                    </p>
-                                    <span class="status online"><i class="en-dot"></i></span>
-                                    <p class="chat-txt">Thank you, have a nice day</p>
-                                </li>
-                            </ul>
-                            <div class="chat-write">
-                                <form action="#" class="form-horizontal" role="form">
-                                    <div class="form-group">
-                                        <textarea name="sendmsg" id="sendMsg" class="form-control elastic" rows="1"></textarea>
-                                        <a role="button" class="btn" id="attach_photo_btn">
-                                            <i class="fa-picture s20"></i> 
-                                        </a>
-                                        <input type="file" name="attach_photo" id="attach_photo">
-                                    </div>
-                                    <!-- End .form-group  -->
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End .sidebar-inner -->
-        </div>
-        <!-- End #right-sidebar -->
-        <!-- Start #content -->
-        <div id="content">
-            <iframe src="home" id="iframe" name="iframe" scrolling="yes" frameborder="0" 
-			width="100%" height="100%" onload="changeFrameHeight(this)"></iframe>
-            <div class="clearfix"></div>
-        </div>
-        <!-- End #content -->
-        <!-- Javascripts -->
-        <!-- Load pace first -->
-        <script src=".//assets/plugins/core/pace/pace.min.js"></script>
-        <!-- Important javascript libs(put in all pages) -->
-        <script src=".//assets/js/jquery-1.8.3.min.js"></script>
-        <script>
-        window.jQuery || document.write('<script src=".//assets/js/libs/jquery-2.1.1.min.js">\x3C/script>')
-        </script>
-        <script src=".//assets/js/jquery-ui.js"></script>
-        <script>
-        window.jQuery || document.write('<script src=".//assets/js/libs/jquery-ui-1.10.4.min.js">\x3C/script>')
-        </script>
-        <!--[if lt IE 9]>
-  <script type="text/javascript" src=".//assets/js/libs/excanvas.min.js"></script>
-  <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <script type="text/javascript" src=".//assets/js/libs/respond.min.js"></script>
-<![endif]-->
-        <!-- Bootstrap plugins -->
-        <script src=".//assets/js/bootstrap/bootstrap.js"></script>
-        <!-- Core plugins ( not remove ever) -->
-        <!-- Handle responsive view functions -->
-        <script src=".//assets/js/jRespond.min.js"></script>
-        <!-- Custom scroll for sidebars,tables and etc. -->
-        <script src=".//assets/plugins/core/slimscroll/jquery.slimscroll.min.js"></script>
-        <script src=".//assets/plugins/core/slimscroll/jquery.slimscroll.horizontal.min.js"></script>
-        <!-- Resize text area in most pages -->
-        <script src=".//assets/plugins/forms/autosize/jquery.autosize.js"></script>
-        <!-- Proivde quick search for many widgets -->
-        <script src=".//assets/plugins/core/quicksearch/jquery.quicksearch.js"></script>
-        <!-- Bootbox confirm dialog for reset postion on panels -->
-        <script src=".//assets/plugins/ui/bootbox/bootbox.js"></script>
-        <!-- Other plugins ( load only nessesary plugins for every page) -->
-        <script src=".//assets/plugins/charts/flot/jquery.flot.js"></script>
-        <script src=".//assets/plugins/charts/flot/jquery.flot.pie.js"></script>
-        <script src=".//assets/plugins/charts/flot/jquery.flot.resize.js"></script>
-        <script src=".//assets/plugins/charts/flot/jquery.flot.time.js"></script>
-        <script src=".//assets/plugins/charts/flot/jquery.flot.growraf.js"></script>
-        <script src=".//assets/plugins/charts/flot/jquery.flot.categories.js"></script>
-        <script src=".//assets/plugins/charts/flot/jquery.flot.stack.js"></script>
-        <script src=".//assets/plugins/charts/flot/jquery.flot.tooltip.min.js"></script>
-        <script src=".//assets/plugins/charts/flot/date.js"></script>
-        <script src=".//assets/plugins/charts/sparklines/jquery.sparkline.js"></script>
-        <script src=".//assets/plugins/charts/pie-chart/jquery.easy-pie-chart.js"></script>
-        <script src=".//assets/plugins/forms/icheck/jquery.icheck.js"></script>
-        <script src=".//assets/plugins/forms/tags/jquery.tagsinput.min.js"></script>
-        <script src=".//assets/plugins/forms/tinymce/tinymce.min.js"></script>
-        <script src=".//assets/plugins/misc/highlight/highlight.pack.js"></script>
-        <script src=".//assets/plugins/misc/countTo/jquery.countTo.js"></script>
-        <script src=".//assets/plugins/ui/weather/skyicons.js"></script>
-        <script src=".//assets/plugins/ui/notify/jquery.gritter.js"></script>
-        <script src=".//assets/plugins/ui/calendar/fullcalendar.js"></script>
-        <script src=".//assets/js/jquery.sprFlat.js"></script>
-        <script src=".//assets/js/app.js"></script>
-        <script src=".//assets/js/pages/dashboard.js"></script>
-    </body>
+
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='./assets/js/jquery.mobile.custom.js'>"+"<"+"/script>");
+		</script>
+		<script src="./assets/js/bootstrap.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<!--[if lte IE 8]>
+		  <script src="./assets/js/excanvas.js"></script>
+		<![endif]-->
+		
+		<script src="./assets/js/jquery-ui.custom.js"></script>
+		<script src="./assets/js/jquery.ui.touch-punch.js"></script>
+		<script src="./assets/js/jquery.easypiechart.js"></script>
+		<script src="./assets/js/jquery.sparkline.js"></script>
+		<script src="./assets/js/flot/jquery.flot.js"></script>
+		<script src="./assets/js/flot/jquery.flot.pie.js"></script>
+		<script src="./assets/js/flot/jquery.flot.resize.js"></script>
+
+		<!-- ace scripts -->
+		<script src="./assets/js/ace/elements.scroller.js"></script>
+		<script src="./assets/js/ace/elements.colorpicker.js"></script>
+		<script src="./assets/js/ace/elements.fileinput.js"></script>
+		<script src="./assets/js/ace/elements.typeahead.js"></script>
+		<script src="./assets/js/ace/elements.wysiwyg.js"></script>
+		<script src="./assets/js/ace/elements.spinner.js"></script>
+		<script src="./assets/js/ace/elements.treeview.js"></script>
+		<script src="./assets/js/ace/elements.wizard.js"></script>
+		<script src="./assets/js/ace/elements.aside.js"></script>
+		<script src="./assets/js/ace/ace.js"></script>
+		<script src="./assets/js/ace/ace.ajax-content.js"></script>
+		<script src="./assets/js/ace/ace.touch-drag.js"></script>
+		<script src="./assets/js/ace/ace.sidebar.js"></script>
+		<script src="./assets/js/ace/ace.sidebar-scroll-1.js"></script>
+		<script src="./assets/js/ace/ace.submenu-hover.js"></script>
+		<script src="./assets/js/ace/ace.widget-box.js"></script>
+		<script src="./assets/js/ace/ace.settings.js"></script>
+		<script src="./assets/js/ace/ace.settings-rtl.js"></script>
+		<script src="./assets/js/ace/ace.settings-skin.js"></script>
+		<script src="./assets/js/ace/ace.widget-on-reload.js"></script>
+		<script src="./assets/js/ace/ace.searchbox-autocomplete.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($) {
+				$('.easy-pie-chart.percentage').each(function(){
+					var $box = $(this).closest('.infobox');
+					var barColor = $(this).data('color') || (!$box.hasClass('infobox-dark') ? $box.css('color') : 'rgba(255,255,255,0.95)');
+					var trackColor = barColor == 'rgba(255,255,255,0.95)' ? 'rgba(255,255,255,0.25)' : '#E2E2E2';
+					var size = parseInt($(this).data('size')) || 50;
+					$(this).easyPieChart({
+						barColor: barColor,
+						trackColor: trackColor,
+						scaleColor: false,
+						lineCap: 'butt',
+						lineWidth: parseInt(size/10),
+						animate: /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase()) ? false : 1000,
+						size: size
+					});
+				})
+			
+				$('.sparkline').each(function(){
+					var $box = $(this).closest('.infobox');
+					var barColor = !$box.hasClass('infobox-dark') ? $box.css('color') : '#FFF';
+					$(this).sparkline('html',
+									 {
+										tagValuesAttribute:'data-values',
+										type: 'bar',
+										barColor: barColor ,
+										chartRangeMin:$(this).data('min') || 0
+									 });
+				});
+			
+			
+			  //flot chart resize plugin, somehow manipulates default browser resize event to optimize it!
+			  //but sometimes it brings up errors with normal resize event handlers
+			  $.resize.throttleWindow = false;
+			
+			  var placeholder = $('#piechart-placeholder').css({'width':'90%' , 'min-height':'150px'});
+			  var data = [
+				{ label: "social networks",  data: 38.7, color: "#68BC31"},
+				{ label: "search engines",  data: 24.5, color: "#2091CF"},
+				{ label: "ad campaigns",  data: 8.2, color: "#AF4E96"},
+				{ label: "direct traffic",  data: 18.6, color: "#DA5430"},
+				{ label: "other",  data: 10, color: "#FEE074"}
+			  ]
+			  function drawPieChart(placeholder, data, position) {
+			 	  $.plot(placeholder, data, {
+					series: {
+						pie: {
+							show: true,
+							tilt:0.8,
+							highlight: {
+								opacity: 0.25
+							},
+							stroke: {
+								color: '#fff',
+								width: 2
+							},
+							startAngle: 2
+						}
+					},
+					legend: {
+						show: true,
+						position: position || "ne", 
+						labelBoxBorderColor: null,
+						margin:[-30,15]
+					}
+					,
+					grid: {
+						hoverable: true,
+						clickable: true
+					}
+				 })
+			 }
+			 drawPieChart(placeholder, data);
+			
+			 /**
+			 we saved the drawing function and the data to redraw with different position later when switching to RTL mode dynamically
+			 so that's not needed actually.
+			 */
+			 placeholder.data('chart', data);
+			 placeholder.data('draw', drawPieChart);
+			
+			
+			  //pie chart tooltip example
+			  var $tooltip = $("<div class='tooltip top in'><div class='tooltip-inner'></div></div>").hide().appendTo('body');
+			  var previousPoint = null;
+			
+			  placeholder.on('plothover', function (event, pos, item) {
+				if(item) {
+					if (previousPoint != item.seriesIndex) {
+						previousPoint = item.seriesIndex;
+						var tip = item.series['label'] + " : " + item.series['percent']+'%';
+						$tooltip.show().children(0).text(tip);
+					}
+					$tooltip.css({top:pos.pageY + 10, left:pos.pageX + 10});
+				} else {
+					$tooltip.hide();
+					previousPoint = null;
+				}
+				
+			 });
+			
+				/////////////////////////////////////
+				$(document).one('ajaxloadstart.page', function(e) {
+					$tooltip.remove();
+				});
+			
+			
+			
+			
+				var d1 = [];
+				for (var i = 0; i < Math.PI * 2; i += 0.5) {
+					d1.push([i, Math.sin(i)]);
+				}
+			
+				var d2 = [];
+				for (var i = 0; i < Math.PI * 2; i += 0.5) {
+					d2.push([i, Math.cos(i)]);
+				}
+			
+				var d3 = [];
+				for (var i = 0; i < Math.PI * 2; i += 0.2) {
+					d3.push([i, Math.tan(i)]);
+				}
+				
+			
+				var sales_charts = $('#sales-charts').css({'width':'100%' , 'height':'220px'});
+				$.plot("#sales-charts", [
+					{ label: "Domains", data: d1 },
+					{ label: "Hosting", data: d2 },
+					{ label: "Services", data: d3 }
+				], {
+					hoverable: true,
+					shadowSize: 0,
+					series: {
+						lines: { show: true },
+						points: { show: true }
+					},
+					xaxis: {
+						tickLength: 0
+					},
+					yaxis: {
+						ticks: 10,
+						min: -2,
+						max: 2,
+						tickDecimals: 3
+					},
+					grid: {
+						backgroundColor: { colors: [ "#fff", "#fff" ] },
+						borderWidth: 1,
+						borderColor:'#555'
+					}
+				});
+			
+			
+				$('#recent-box [data-rel="tooltip"]').tooltip({placement: tooltip_placement});
+				function tooltip_placement(context, source) {
+					var $source = $(source);
+					var $parent = $source.closest('.tab-content')
+					var off1 = $parent.offset();
+					var w1 = $parent.width();
+			
+					var off2 = $source.offset();
+					//var w2 = $source.width();
+			
+					if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
+					return 'left';
+				}
+			
+			
+				$('.dialogs,.comments').ace_scroll({
+					size: 300
+			    });
+				
+				
+				//Android's default browser somehow is confused when tapping on label which will lead to dragging the task
+				//so disable dragging when clicking on label
+				var agent = navigator.userAgent.toLowerCase();
+				if("ontouchstart" in document && /applewebkit/.test(agent) && /android/.test(agent))
+				  $('#tasks').on('touchstart', function(e){
+					var li = $(e.target).closest('#tasks li');
+					if(li.length == 0)return;
+					var label = li.find('label.inline').get(0);
+					if(label == e.target || $.contains(label, e.target)) e.stopImmediatePropagation() ;
+				});
+			
+				$('#tasks').sortable({
+					opacity:0.8,
+					revert:true,
+					forceHelperSize:true,
+					placeholder: 'draggable-placeholder',
+					forcePlaceholderSize:true,
+					tolerance:'pointer',
+					stop: function( event, ui ) {
+						//just for Chrome!!!! so that dropdowns on items don't appear below other items after being moved
+						$(ui.item).css('z-index', 'auto');
+					}
+					}
+				);
+				$('#tasks').disableSelection();
+				$('#tasks input:checkbox').removeAttr('checked').on('click', function(){
+					if(this.checked) $(this).closest('li').addClass('selected');
+					else $(this).closest('li').removeClass('selected');
+				});
+			
+			
+				//show the dropdowns on top or bottom depending on window height and menu position
+				$('#task-tab .dropdown-hover').on('mouseenter', function(e) {
+					var offset = $(this).offset();
+			
+					var $w = $(window)
+					if (offset.top > $w.scrollTop() + $w.innerHeight() - 100) 
+						$(this).addClass('dropup');
+					else $(this).removeClass('dropup');
+				});
+			
+			})
+		</script>
+
+		<!-- the following scripts are used in demo only for onpage help and you don't need them -->
+		<link rel="stylesheet" href="./assets/css/ace.onpage-help.css" />
+		<link rel="stylesheet" href="./docs/assets/js/themes/sunburst.css" />
+<html>
+
+		<script type="text/javascript"> ace.vars['base'] = '..'; </script>
+		<script src="./assets/js/ace/elements.onpage-help.js"></script>
+		<script src="./assets/js/ace/ace.onpage-help.js"></script>
+		<script src="./docs/assets/js/rainbow.js"></script>
+		<script src="./docs/assets/js/language/generic.js"></script>
+		<script src="./docs/assets/js/language/html.js"></script>
+		<script src="./docs/assets/js/language/css.js"></script>
+		<script src="./docs/assets/js/language/javascript.js"></script>
+	</body>
 </html>

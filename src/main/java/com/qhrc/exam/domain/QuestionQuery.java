@@ -1,7 +1,8 @@
 package com.qhrc.exam.domain;
 
-public class QuestionQuery extends QueryEntity {
+public class QuestionQuery  {
 	private String quesTitle;
+	private String quesRightAnswer;
 	private int quesTypeId;
 	private int quesCateId;
 	private String quesTypeName;
@@ -15,6 +16,12 @@ public class QuestionQuery extends QueryEntity {
 	}
 	public int getQuesTypeId() {
 		return quesTypeId;
+	}
+	public String getQuesRightAnswer() {
+		return quesRightAnswer;
+	}
+	public void setQuesRightAnswer(String quesRightAnswer) {
+		this.quesRightAnswer = quesRightAnswer;
 	}
 	public void setQuesTypeId(int quesTypeId) {
 		this.quesTypeId = quesTypeId;

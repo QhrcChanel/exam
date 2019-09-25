@@ -15,6 +15,17 @@
         q.ques_id, q.ques_title, q.ques_right_answer, q.ques_type_id, q.ques_cate_id, qt.ques_type_name, qc.ques_cate_name
     </sql>
     
+    <sql id="Question_Column_List">
+        ques_title, ques_right_answer, ques_type_id, ques_cate_id
+    </sql>
+    
+    <insert id="insertQues">
+        INSERT INTO question
+        (ques_title, ques_right_answer, ques_type_id, ques_cate_id, ques_status)
+        VALUES
+        (#{quesTitle},#{quesRightAnswer},#{quesTypeId},#{quesCateId}, 1)
+    </insert>
+    
     <select id="selectQuesByParmas" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
@@ -24,6 +35,10 @@
 		and q.ques_status = 1
         <if test="quesTitle != null and quesTitle != ''">
         	and q.ques_title LIKE CONCAT('%',#{quesTitle},'%')
+        </if> 
+        
+        <if test="quesRightAnswer != null and quesRightAnswer != ''">
+        	and q.ques_right_answer LIKE CONCAT('%',#{quesRightAnswer},'%')
         </if> 
         
         <if test="quesTypeId != null and quesTypeId != 0">
@@ -36,23 +51,50 @@
         	limit #{currIndex}, #{pageSize}
     </select>
     
-    <update id="updateQues" parameterType="com.qhrc.exam.domain.Question">
-    	update question set 
+    <select id="selectQuesNumByParmas" resultType="java.lang.Integer">
+        select count(1)
+        from question q, question_type qt, question_cate qc 
+        where q.ques_type_id = qt.ques_type_id
+		and q.ques_cate_id = qc.ques_cate_id
+		and q.ques_status = 1
+        <if test="quesTitle != null and quesTitle != ''">
+        	and q.ques_title LIKE CONCAT('%',#{quesTitle},'%')
+        </if> 
+        
+        <if test="quesRightAnswer != null and quesRightAnswer != ''">
+        	and q.ques_right_answer LIKE CONCAT('%',#{quesRightAnswer},'%')
+        </if> 
+        
+        <if test="quesTypeId != null and quesTypeId != 0">
+        	and q.ques_type_id = #{quesTypeId}
+        </if> 
+        
+        <if test="quesCateId != null and quesCateId != 0">
+        	and q.ques_cate_id = #{quesCateId}
+        </if> 
+    </select>
+    
+    <update id="updateQues">
+    	update question
     	<trim prefix="set" suffixOverrides=",">
-    	
-    	<if test="quesTitle != null and quesTitle != ''">
-    		ques_title = #{quesTitle},
-    	</if>
-    	
-    	<if test="quesTypeId != null and quesTypeId != 0">
-    		ques_type_id = #{quesTypeId},
-    	</if>
-    	
-    	<if test="quesCateId != null and quesCateId != 0">
-    		ques_cate_id = #{quesCateId},
-    	</if>
-    		where ques_id = #{quesId}
+	    	<if test="quesTitle != null and quesTitle != ''">
+	    		ques_title = #{quesTitle},
+	    	</if>
+	    	
+	    	<if test="quesRightAnswer != null and quesRightAnswer != ''">
+	    		ques_right_answer = #{quesRightAnswer},
+	        </if>
+	    	
+	    	<if test="quesTypeId != null and quesTypeId != 0">
+	    		ques_type_id = #{quesTypeId},
+	    	</if>
+	    	
+	    	<if test="quesCateId != null and quesCateId != 0">
+	    		ques_cate_id = #{quesCateId},
+    		</if>
     	</trim>
+    		where ques_id = #{quesId}
+    	
     </update>
     
 </mapper>
