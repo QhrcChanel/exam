@@ -1,4 +1,4 @@
-package com.qhrc.examcommon;
+package com.qhrc.exam.common;
 
 import java.util.HashMap;
 

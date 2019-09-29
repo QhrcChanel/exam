@@ -22,7 +22,7 @@ import com.qhrc.exam.domain.QuestionType;
 import com.qhrc.exam.service.QuestionCateService;
 import com.qhrc.exam.service.QuestionService;
 import com.qhrc.exam.service.QuestionTypeService;
-import com.qhrc.examcommon.JsonHelper;
+import com.qhrc.exam.common.JsonHelper;
 
 @Controller
 public class QuestionController {
