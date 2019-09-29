@@ -383,44 +383,18 @@ function changeFrameHeight(that){
 						<b class="arrow"></b>
 					</li>
 
-					<li class="question">
+					<li class="">
 						<a href="quesList" target="iframe">
 							<i class="menu-icon fa fa-desktop"></i>
-							<span class="menu-text">
-								试题管理
-							</span>
+							<span class="menu-text"> 试题管理 </span>
 						</a>
 					</li>
 
 					<li class="">
-						<a href="#" class="dropdown-toggle">
+						<a href="examList" target="iframe">
 							<i class="menu-icon fa fa-list"></i>
-							<span class="menu-text"> Tables </span>
-
-							<b class="arrow fa fa-angle-down"></b>
+							<span class="menu-text"> 考试管理 </span>
 						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="">
-								<a href="tables.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Simple &amp; Dynamic
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="jqgrid.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									jqGrid plugin
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-						</ul>
 					</li>
 
 					<li class="">
